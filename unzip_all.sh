@@ -15,7 +15,7 @@ fi
 
 
 for file in "$DIRECTORY"/*.zip; do	
-	dir_name="{$DIRECTORY%.zip}"
+	dir_name="${file%.zip}"
 	mkdir -p "$dir_name"
 	unzip -q "$file" -d "$dir_name" 
 	echo "Extracted $file to $dir_name/"
